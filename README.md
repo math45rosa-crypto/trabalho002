@@ -170,16 +170,16 @@ usuarios
 login, senha, cargo
 
  Instalação, Configuração e Execução
-1️⃣ Clonar o repositório
+1️ Clonar o repositório
 git clone https://github.com/math45rosa-crypto/trabalho002.git
 
-2️⃣ Instalar dependências
+2️ Instalar dependências
 npm install
 
-3️⃣ Iniciar servidor
+3️ Iniciar servidor
 npm start
 
-4️⃣ Arquivo .env
+4️ Arquivo .env
 MONGO_URI=mongodb://localhost:27017/escola
 PORT=3000
 
@@ -197,10 +197,10 @@ Controllers executam operações CRUD.
 Validators garantem consistência dos dados.
 
  Integrantes do Projeto
-Nome	GitHub
-Wilson Ney Gomes Evangelista	github.com/WilsonNey
-Gabrielle Rocha	github.com/GabrielleRocha
-Matheus Henrique Rosa	github.com/MatheusRosa
+Nome	GitHub     Matricula
+Wilson Ney Gomes Evangelista	github.com/Wilson604        24214290051
+Gabrielle Rocha	github.com/Gabriella-alt                  24214290028
+Matheus Henrique Rosa	github.com/math45osa-cripto         24214290029
  Contribuições dos Membros
 Wilson Ney
 
