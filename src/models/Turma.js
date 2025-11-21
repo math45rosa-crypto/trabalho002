@@ -1,19 +1,11 @@
-const mongoose = require("mongoose");
+const mongoose = require('mongoose');
 
 const TurmaSchema = new mongoose.Schema({
   codigo: { type: String, required: true },
-  ano: { type: Number, required: true },
-  semestre: { type: Number, required: true },
-  disciplinaId: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: "Disciplina",
-    required: true
-  },
-  professorId: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: "Professor",
-    required: true
-  }
-});
+  disciplina_id: { type: mongoose.Schema.Types.ObjectId, ref: 'Disciplina' },
+  professor_id: { type: mongoose.Schema.Types.ObjectId, ref: 'Professor' },
+  ano: { type: Number },
+  semestre: { type: Number }
+}, { timestamps: true });
 
-module.exports = mongoose.model("Turma", TurmaSchema);
+module.exports = mongoose.model('Turma', TurmaSchema);

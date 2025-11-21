@@ -1,16 +1,18 @@
 {
   "name": "trabalho-pratico",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
     "start": "node src/index.js",
-    "dev": "nodemon src/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon src/index.js"
   },
   "dependencies": {
     "dotenv": "^17.2.3",
-    "express": "^5.1.0",
+    "express": "^4.18.2",
     "mongoose": "^8.20.0",
     "yup": "^1.2.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
   }
 }

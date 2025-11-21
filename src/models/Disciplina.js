@@ -1,13 +1,10 @@
-const mongoose = require("mongoose");
+const mongoose = require('mongoose');
 
 const DisciplinaSchema = new mongoose.Schema({
   nome: { type: String, required: true },
-  cargaHoraria: { type: Number, required: true },
-  cursoId: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: "Curso",
-    required: true
-  }
-});
+  carga_horaria: { type: Number },
+  curso_id: { type: mongoose.Schema.Types.ObjectId, ref: 'Curso' },
+  professor_id: { type: mongoose.Schema.Types.ObjectId, ref: 'Professor' }
+}, { timestamps: true });
 
-module.exports = mongoose.model("Disciplina", DisciplinaSchema);
+module.exports = mongoose.model('Disciplina', DisciplinaSchema);

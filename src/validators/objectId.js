@@ -1,3 +1,7 @@
-const yup = require("yup");
+const mongoose = require('mongoose');
 
-module.exports = yup.string().matches(/^[0-9a-fA-F]{24}$/, "ID inválido");
+function isObjectId(id) {
+  return mongoose.Types.ObjectId.isValid(id);
+}
+
+module.exports = { isObjectId };

@@ -2,9 +2,7 @@ const yup = require('yup');
 
 const schema = yup.object({
   nome: yup.string().required(),
-  email: yup.string().email().required(),
-  senha_hash: yup.string().required(),
-  papel: yup.string().nullable()
+  duracao: yup.number().positive().nullable()
 });
 
 function handle(schema) {

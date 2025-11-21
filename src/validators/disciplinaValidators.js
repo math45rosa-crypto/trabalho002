@@ -1,10 +1,11 @@
 const yup = require('yup');
+const { isObjectId } = require('./objectId');
 
 const schema = yup.object({
   nome: yup.string().required(),
-  email: yup.string().email().required(),
-  senha_hash: yup.string().required(),
-  papel: yup.string().nullable()
+  carga_horaria: yup.number().integer().positive().nullable(),
+  curso_id: yup.string().test('is-objectid', 'Invalid ObjectId', v => !v || isObjectId(v)),
+  professor_id: yup.string().test('is-objectid', 'Invalid ObjectId', v => !v || isObjectId(v))
 });
 
 function handle(schema) {

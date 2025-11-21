@@ -1,11 +1,10 @@
-const mongoose = require("mongoose");
+const mongoose = require('mongoose');
 
 const AlunoSchema = new mongoose.Schema({
   nome: { type: String, required: true },
-  email: { type: String, required: true },
-  cpf: { type: String, required: true },
-  telefone: { type: String, required: true },
-  dataNascimento: { type: Date, required: true }
-});
+  email: { type: String, required: true, lowercase: true },
+  data_nascimento: { type: Date },
+  curso_id: { type: mongoose.Schema.Types.ObjectId, ref: 'Curso' }
+}, { timestamps: true });
 
-module.exports = mongoose.model("Aluno", AlunoSchema);
+module.exports = mongoose.model('Aluno', AlunoSchema);
